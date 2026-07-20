@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor — Smooth Scroll Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+
+  <nav class="nav">
+    <span class="brand">Anchor</span>
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section hero">
+    <p class="eyebrow">01 — Welcome</p>
+    <h1>Smooth scrolling,<br>anchored navigation.</h1>
+    <p class="section-text">Click a link in the menu above, or scroll — the nav highlights the section in view.</p>
+    <a href="#work" class="cta">See how it's built ↓</a>
+  </section>
+
+  <section id="work" class="section work">
+    <p class="eyebrow">02 — Work</p>
+    <h2>Built with three small ideas</h2>
+    <div class="cards">
+      <div class="mini-card">
+        <span class="mini-num">01</span>
+        <h3>scrollIntoView</h3>
+        <p>Each nav link scrolls to its section with a native smooth behavior — no libraries.</p>
+      </div>
+      <div class="mini-card">
+        <span class="mini-num">02</span>
+        <h3>Intersection Observer</h3>
+        <p>Watches which section is currently visible and updates the active nav link automatically.</p>
+      </div>
+      <div class="mini-card">
+        <span class="mini-num">03</span>
+        <h3>Progress bar</h3>
+        <p>A thin bar at the top fills as you scroll down the page, in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section process">
+    <p class="eyebrow">03 — Process</p>
+    <h2>How the anchors work</h2>
+    <ol class="steps">
+      <li><span>1</span>Each section gets a unique <code>id</code>.</li>
+      <li><span>2</span>Nav links point to <code>#id</code> and are caught by a click handler.</li>
+      <li><span>3</span><code>element.scrollIntoView({behavior: "smooth"})</code> handles the animation.</li>
+      <li><span>4</span>An Observer watches scroll position and re-highlights the nav.</li>
+    </ol>
+  </section>
+
+  <section id="contact" class="section contact">
+    <p class="eyebrow">04 — Contact</p>
+    <h2>Built by Chahrazed Saidaoui</h2>
+    <p class="section-text">HTML5, CSS3 &amp; vanilla JavaScript — part of a personal practice portfolio.</p>
+    <a href="#home" class="cta">Back to top ↑</a>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>

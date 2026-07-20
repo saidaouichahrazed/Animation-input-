@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formfield — Animated Inputs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <p class="eyebrow">Interactive form demo</p>
+    <h1>Formfield</h1>
+    <p class="lede">A small playground of animated, vanilla-JavaScript form interactions.</p>
+
+    <form id="demoForm" novalidate>
+
+      <div class="field">
+        <input type="text" id="name" placeholder=" " required>
+        <label for="name">Full name</label>
+        <span class="bar"></span>
+      </div>
+
+      <div class="field">
+        <input type="email" id="email" placeholder=" " required>
+        <label for="email">Email address</label>
+        <span class="bar"></span>
+        <span class="check" id="emailCheck">✓</span>
+      </div>
+
+      <div class="field">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">Password</label>
+        <span class="bar"></span>
+      </div>
+      <div class="strength">
+        <div class="strength-fill" id="strengthFill"></div>
+      </div>
+      <p class="strength-label" id="strengthLabel">Enter a password</p>
+
+      <div class="field textarea-field">
+        <textarea id="bio" placeholder=" " maxlength="140" required></textarea>
+        <label for="bio">Short bio</label>
+        <span class="bar"></span>
+        <svg class="ring" width="34" height="34" viewBox="0 0 34 34">
+          <circle class="ring-bg" cx="17" cy="17" r="14"></circle>
+          <circle class="ring-fill" id="ringFill" cx="17" cy="17" r="14"></circle>
+        </svg>
+      </div>
+
+      <label class="check-row">
+        <input type="checkbox" id="terms" required>
+        <span class="box"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span>
+        I agree to the terms
+      </label>
+
+      <button type="submit" id="submitBtn">
+        <span class="btn-text">Submit</span>
+        <svg class="btn-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>
+      </button>
+    </form>
+
+    <p class="footnote">Built by Chahrazed Saidaoui · HTML5, CSS3 &amp; vanilla JavaScript</p>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
